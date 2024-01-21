@@ -1,4 +1,4 @@
 1 Adam Nowak Krakow Wrzosowa 20 - -1
-2 Anna Mocna Wieliczka Wiejska 2 - 1 -1
+2 Anna Mocna Wieliczka Wiejska 2 - 1 3 -1
 3 Marian Owocny Krakow Krowodrza 10 25 -1
 4 Martin Luter Krakow Krowoderska 1 17 -1

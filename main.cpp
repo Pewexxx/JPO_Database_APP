@@ -105,10 +105,12 @@ ostream& recWriteBook(ostream& o, const vector<Book>& books) {
 istream& recReadBook(istream& i, vector<Book>& books) {
     Book book;
     while (i >> book.id) {
-        i.ignore(); // Ignore the semicolon after id
-        getline(i >> std::ws, book.title, ';'); // Read title until the next semicolon
-        getline(i >> std::ws, book.author, ';'); // Read author until the next semicolon
-        i >> book.yearPublished >> book.isBorrowed;
+        i.ignore();
+        getline(i >> std::ws, book.title, ';');
+        getline(i >> std::ws, book.author, ';');
+        i >> book.yearPublished;
+        i.ignore();
+        i >> book.isBorrowed;
         books.push_back(book);
     }
     return i;
@@ -201,13 +203,13 @@ void listBooksCallback(Fl_Widget*, void*) {
     }
 
     string info = "List of Books:\n";
-    info += "ID   Title                    Author                    Pub. Date     Borrowed\n";
-    info += "---- --------------------- ----------------------- ---------------- ------------\n";
+    info += "ID   Title                                      Author                             Pub. Date     Borrowed\n";
+    info += "---- ----------------------------------- ----------------------------------- ---------------- ------------\n";
 
     for (const auto& book : libraryBooks) {
-        info += to_string(book.id) + "   ";
-        info += book.title + "  ";
-        info += book.author + "        ";
+        info += to_string(book.id) + "  ";
+        info += book.title + "                         ";
+        info += book.author + "                      ";
         info += to_string(book.yearPublished) + "        ";
         info += (book.isBorrowed ? "Yes" : "No");
 
@@ -291,7 +293,7 @@ void rentBookCallback(Fl_Widget*, void*) {
 
     Fl_Button* rentButton = new Fl_Button(150, 100, 100, 30, "Rent Book");
     rentButton->callback([](Fl_Widget*, void*) {
-        // Get input values
+
         int userId = atoi(userIdInput->value());
         int bookId = atoi(bookIdInput->value());
 
@@ -346,14 +348,11 @@ int main() {
     cout << "FLTK INIT" <<endl;
     Fl::scheme("gtk+");
 
-    // Create the main window
     mainWindow = new Fl_Window(550, 300, "Library Management System");
 
-    // Create a text display widget
     textDisplay = new Fl_Text_Display(25, 10, 500, 200, "Information");
     textDisplay->buffer(new Fl_Text_Buffer());
 
-    // Create buttons for various actions
     Fl_Button* listReadersButton = new Fl_Button(10, 220, 80, 30, "List Readers");
     listReadersButton->callback(listReadersCallback);
 
