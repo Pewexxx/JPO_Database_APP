@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JPO_Database_APP", "JPO_Database_APP.vcxproj", "{44C214FF-9378-40D7-9337-C5A710168BA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44C214FF-9378-40D7-9337-C5A710168BA0}.Debug|x64.ActiveCfg = Debug|x64
+		{44C214FF-9378-40D7-9337-C5A710168BA0}.Debug|x64.Build.0 = Debug|x64
+		{44C214FF-9378-40D7-9337-C5A710168BA0}.Debug|x86.ActiveCfg = Debug|Win32
+		{44C214FF-9378-40D7-9337-C5A710168BA0}.Debug|x86.Build.0 = Debug|Win32
+		{44C214FF-9378-40D7-9337-C5A710168BA0}.Release|x64.ActiveCfg = Release|x64
+		{44C214FF-9378-40D7-9337-C5A710168BA0}.Release|x64.Build.0 = Release|x64
+		{44C214FF-9378-40D7-9337-C5A710168BA0}.Release|x86.ActiveCfg = Release|Win32
+		{44C214FF-9378-40D7-9337-C5A710168BA0}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B53AE0C-CD39-46AD-BDEB-DE4F4A75A8AD}
+	EndGlobalSection
+EndGlobal
